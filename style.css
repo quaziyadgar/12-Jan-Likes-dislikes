@@ -1,0 +1,18 @@
+body{
+    background: linear-gradient(90deg, red, yellow);
+    background-repeat: no-repeat;
+    height: 84.5vh;
+}
+main{
+    text-align: center;
+    margin-top: 100px;
+}
+span{
+    padding: 40px;
+}
+button{
+    background: linear-gradient(120deg , #33ccff 0%, #77e9a6 50% ,#ff99cc 100%);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}

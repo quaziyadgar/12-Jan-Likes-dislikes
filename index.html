@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Likes and Dislikes</title>
+</head>
+<body>
+    <main>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEIu7npi-zxNsAiGoMXQxJuyT6xUPcJXbQIg&usqp=CAU" alt="" srcset="">
+        </div>
+        <button onclick="countLike();">Like</button><span id="likeshow"></span>
+        <button onclick="countDislike();">Dislike</button><span id="dislikeshow"></span>
+    </main>
+    <script>
+        var like = 0;
+        var dislike = 0;
+        var lshow = document.getElementById('likeshow');
+        var dshow = document.getElementById('dislikeshow');
+        function countLike(){
+            if(like > dislike || like == dislike)
+               {
+                    like = like + 1;
+                    lshow.innerText = like;
+                    dshow.innerHTML = dislike;
+               }
+               else
+               {
+                   if(like<=0)
+                   {
+                    dislike=dislike-1;
+                    dshow.innerText=dislike;
+                   }
+                   else{
+                    like = like + 1;
+                   lshow.innerText=likes;
+                   } 
+               }
+        }
+        function countDislike(){
+            if(dislike > like || dislike == like)
+            {
+                dislike = dislike + 1;
+                dshow.innerText = dislike;
+            }
+            else{
+                if(dislike<=0)
+                {
+                    like = like-1;
+                    lshow.innerText = like;
+                }
+                else{
+                    dislike = dislike + 1;
+                    dshow.innerText = dislike;
+                }
+
+            }
+        }
+    </script>
+</body>
+</html>
